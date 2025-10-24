@@ -20,12 +20,6 @@ Ada/SPARK project for STM32F0 microcontrollers.
      ```
      choco install openocd
      ```
-     
-   - Verify installation:
-     ```bash
-     openocd --version
-     ```
-
 ## Setup
 
 ### 1. Add a dependency to the light_tasking_stm32f0xx runtime crate
