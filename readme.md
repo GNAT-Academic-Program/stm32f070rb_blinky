@@ -16,14 +16,6 @@ Ada/SPARK project for STM32F0 microcontrollers.
      ```bash
      sudo apt install openocd
      ```
-   - **Linux (Fedora)**:
-     ```bash
-     sudo dnf install openocd
-     ```
-   - **macOS**:
-     ```bash
-     brew install openocd
-     ```
    - **Windows**:
      ```
      choco install openocd
