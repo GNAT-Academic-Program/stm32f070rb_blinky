@@ -52,6 +52,11 @@ for Target use runtime_build'Target;
 for Runtime ("Ada") use runtime_build'Runtime ("Ada");
 ```
 
+- Ensure you include all `src` subfolders:
+```ada
+for Source_Dirs use ("src/**", "config/");
+```
+
 - After the compiler section add the following:
 ```
 package Linker is
@@ -79,11 +84,6 @@ wget -O svd/STM32F0x0.svd https://raw.githubusercontent.com/modm-io/cmsis-svd-st
 svd2ada -o src/devices/ svd/STM32F0x0.svd
 ```
 
-Ensure your `.gpr` file includes:
-```ada
-for Source_Dirs use ("src/**", "config/");
-```
-
 ## Build
 
 ```bash
@@ -96,9 +96,8 @@ alr build
 
 To flash the compiled binary to the STM32F070RB board:
 
-1. **Connect the board** via USB.
-
-2. **Flash using OpenOCD:**
+- **Connect the board** via USB.
+- **Flash using OpenOCD:**
 
 ```bash
 openocd -f interface/stlink.cfg -f target/stm32f0x.cfg -c "program bin/stm32f070rb_blinky verify reset exit"
