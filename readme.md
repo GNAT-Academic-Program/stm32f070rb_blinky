@@ -1,4 +1,4 @@
-# STM32F070RB Blinky - STM32F0 Project
+# STM32F070RB Blinky
 
 Ada/SPARK project for STM32F0 microcontrollers.
 
