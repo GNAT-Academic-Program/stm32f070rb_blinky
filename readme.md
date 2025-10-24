@@ -63,7 +63,7 @@ end Linker;
 
 The device interfaces are already included in `src/devices/`, but if you need to regenerate them:
 
-**Install svd2ada** (if not already installed):
+**Install svd2ada**:
 - Download from: https://github.com/AdaCore/svd2ada
 
 **Generate the device files:**
