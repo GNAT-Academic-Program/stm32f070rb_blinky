@@ -11,6 +11,29 @@ Ada/SPARK project for STM32F0 microcontrollers.
      alr --version
      ```
 
+2. **OpenOCD** (for flashing the board)
+   - **Linux (Debian/Ubuntu)**:
+     ```bash
+     sudo apt install openocd
+     ```
+   - **Linux (Fedora)**:
+     ```bash
+     sudo dnf install openocd
+     ```
+   - **macOS**:
+     ```bash
+     brew install openocd
+     ```
+   - **Windows**:
+     ```
+     choco install openocd
+     ```
+     
+   - Verify installation:
+     ```bash
+     openocd --version
+     ```
+
 ## Setup
 
 ### 1. Add a dependency to the light_tasking_stm32f0xx runtime crate
@@ -77,6 +100,20 @@ for Source_Dirs use ("src/**", "config/");
 
 ```bash
 alr build
+```
+
+## Flash to Board
+
+### Using OpenOCD
+
+To flash the compiled binary to the STM32F070RB board:
+
+1. **Connect the board** via USB.
+
+2. **Flash using OpenOCD:**
+
+```bash
+openocd -f interface/stlink.cfg -f target/stm32f0x.cfg -c "program bin/stm32f070rb_blinky verify reset exit"
 ```
 
 ## Project Structure
