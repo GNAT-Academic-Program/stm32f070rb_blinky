@@ -41,16 +41,18 @@ light_tasking_stm32f0xx.APB_Pre    = "DIV1"
 ```
 
 ### 2. Configure the project file
-Edit the project file `stm32f070rb_blinky.gpr`. At the top add:
+Edit the project file `stm32f070rb_blinky.gpr`.    
+
+- At the top add:
 `with "runtime_build.gpr";`
 
-Directly after `project Stm32f070rb_Blinky is` add the following:
+- Directly after `project Stm32f070rb_Blinky is` add the following:
 ```
 for Target use runtime_build'Target;
 for Runtime ("Ada") use runtime_build'Runtime ("Ada");
 ```
 
-After the compiler section add the following:
+- After the compiler section add the following:
 ```
 package Linker is
   for Switches ("Ada") use Runtime_Build.Linker_Switches;
