@@ -11,9 +11,6 @@ tags = []
 
 executables = ["stm32f070rb_blinky"]
 
-[test]
-runner = "alire"
-
 [[depends-on]]
 light_tasking_stm32f0xx = "*"
 
