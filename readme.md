@@ -20,6 +20,11 @@ Ada/SPARK project for STM32F0 microcontrollers.
      ```
      choco install openocd
      ```
+   - **MacOS**:
+     ```
+     brew install openocd
+     ```
+
 ## Setup
 
 ### 1. Add a dependency to the light_tasking_stm32f0xx runtime crate
