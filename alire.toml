@@ -15,6 +15,9 @@ executables = ["stm32f070rb_blinky"]
 runner = "alire"
 
 [[depends-on]]
+hal = "~0.3"
+usb_embedded = "~0.3"
+gnat_arm_elf = ">=12"
 light_tasking_stm32f0xx = "*"
 
 [configuration.values]

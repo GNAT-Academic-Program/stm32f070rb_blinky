@@ -1,6 +1,8 @@
 with STM32F0X0.RCC;  use STM32F0X0.RCC;
 with STM32F0X0.GPIO; use STM32F0X0.GPIO;
 
+with STM32F0X0.USB_Device; use STM32F0X0.USB_Device;
+
 procedure Stm32f070rb_Blinky is
 begin
    RCC_Periph.AHBENR.IOPAEN := 1;         -- Enable GPIOB clock
